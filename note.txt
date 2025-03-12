@@ -12,7 +12,9 @@ cd mattergen
 
 uv pip install -e .
 
-if faied, try this UV_HTTP_TIMEOUT=120 uv pip install -e .
+if faied, try this 
+
+UV_HTTP_TIMEOUT=120 uv pip install -e .
 
 sudo apt install git-lfs
 git lfs --version
