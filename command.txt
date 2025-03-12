@@ -72,3 +72,6 @@ mattergen-generate ./results/space_group_221 \
   --num_batches=2 \
   --properties_to_condition_on="{'space_group': 221}" \
   --diffusion_guidance_factor=2.0
+
+
+mattergen-generate ./results/space_group_221   --pretrained-name=space_group   --batch_size=5   --num_batches=2   --properties_to_condition_on="{'space_group': 221}"   --diffusion_guidance_factor=2.0
