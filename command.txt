@@ -57,7 +57,7 @@ mattergen-generate $RESULTS_PATH/chem_energy \
 mattergen-generate $RESULTS_PATH/mag_hhi \
   --pretrained-name=dft_mag_density_hhi_score \
   --batch_size=16 \
-  --num_batches=1 \
+  --num_batches=2 \
   --properties_to_condition_on="{'dft_mag_density': 0.01, 'hhi_score': 0.95}" \
   --diffusion_guidance_factor=2.0
 
@@ -74,4 +74,10 @@ mattergen-generate ./results/space_group_221 \
   --diffusion_guidance_factor=2.0
 
 
-mattergen-generate ./results/space_group_221   --pretrained-name=space_group   --batch_size=5   --num_batches=2   --properties_to_condition_on="{'space_group': 221}"   --diffusion_guidance_factor=2.0
+mattergen-generate ./results/space_group_221   --pretrained-name=   --batch_size=5   --num_batches=2   --properties_to_condition_on="{'space_group': 221}"   --diffusion_guidance_factor=2.0
+
+
+
+# test 2
+
+mattergen-generate $RESULTS_PATH/mag_hhi --pretrained-name=dft_mag_density_hhi_score --batch_size=16 --num_batches=2 --properties_to_condition_on="{'dft_mag_density': 4.0, 'hhi_score': 1500}" --diffusion_guidance_factor=2.5
