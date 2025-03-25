@@ -81,3 +81,7 @@ mattergen-generate ./results/space_group_221   --pretrained-name=   --batch_size
 # test 2
 
 mattergen-generate $RESULTS_PATH/mag_hhi --pretrained-name=dft_mag_density_hhi_score --batch_size=16 --num_batches=2 --properties_to_condition_on="{'dft_mag_density': 4.0, 'hhi_score': 1500}" --diffusion_guidance_factor=2.5
+
+
+mattergen-generate $RESULTS_PATH/eah --pretrained-name=chemical_system_energy_above_hull --batch_size=20 --num_batches=2 --properties_to_condition_on="{'chemical_system_energy_above_hull': 0}" --diffusion_guidance_factor=2.5
+
