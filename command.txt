@@ -95,3 +95,5 @@ mattergen-generate $RESULTS_PATH/bandgap3.0 --pretrained-name=dft_band_gap --bat
 # chemical_system_energy_above_hull
 
 mattergen-generate $RESULTS_PATH/Li-S --pretrained-name=chemical_system_energy_above_hull --batch_size=16 --properties_to_condition_on="{'energy_above_hull': 0.05, 'chemical_system': 'Li-S'}" --diffusion_guidance_factor=2.0
+
+mattergen-generate $RESULTS_PATH/Li-S-Mn --pretrained-name=chemical_system_energy_above_hull --batch_size=10 --properties_to_condition_on="{'energy_above_hull': 0.04, 'chemical_system': 'Ni-Fe-Mn-O'}" --diffusion_guidance_factor=2.0
